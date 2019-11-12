@@ -75,7 +75,7 @@ def gross_per_studio(collection)
   i = 0 
   
   while i < collection.length do 
-    if studios[]
+    if studios.key?()
   
   
   while i < collection.length do 
