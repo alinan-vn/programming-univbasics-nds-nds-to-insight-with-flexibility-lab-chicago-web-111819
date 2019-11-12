@@ -79,7 +79,7 @@ def gross_per_studio(collection)
     i += 1 
   end 
   
-  studios
+  studios = studios.uniq
   
       
   
