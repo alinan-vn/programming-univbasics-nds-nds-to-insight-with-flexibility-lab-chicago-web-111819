@@ -75,7 +75,10 @@ def gross_per_studio(collection)
   i = 0 
   
   while i < collection.length do 
-    if studios.key?()
+    if studios.key?(collection[i][:studio]) == true 
+      studio[collection[i][:studio]] << collection[i][:worldwide_gross]
+    else 
+      
   
   
   while i < collection.length do 
