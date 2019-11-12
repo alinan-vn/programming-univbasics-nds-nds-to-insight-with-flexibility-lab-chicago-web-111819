@@ -71,14 +71,15 @@ def gross_per_studio(collection)
   #
   # Hash whose keys are the studio names and whose values are the sum
   # total of all the worldwide_gross numbers for every movie in the input Hash
-  studios = []
+  studios = {}
   i = 0 
   
   while i < collection.length do 
     if studios.key?(collection[i][:studio]) == true 
       studio[collection[i][:studio]] << collection[i][:worldwide_gross]
     else 
-      
+      studios[collection[i][:studio]] = 0 
+      studio[collection[i][:studio]] << collection[i][:worldwide_gross]
   
   
   while i < collection.length do 
