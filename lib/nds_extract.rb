@@ -104,6 +104,7 @@ def movies_with_directors_set(source)
   while i < source.length do 
     k = 0 
     while k < source[i][:movies].length do 
+      array << [movies_with_director_key]
       array << [{:title => source[i][:movies][k], :director_name => source[i][:name]}]
       k += 1 
     end 
