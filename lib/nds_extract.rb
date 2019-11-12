@@ -76,25 +76,27 @@ def gross_per_studio(collection)
   
   while i < collection.length do 
     if studios.key?(collection[i][:studio]) == true 
-      studio[collection[i][:studio]] << collection[i][:worldwide_gross]
+      studio[collection[i][:studio]] += collection[i][:worldwide_gross]
     else 
       studios[collection[i][:studio]] = 0 
-      studio[collection[i][:studio]] << collection[i][:worldwide_gross]
-  
-  
-  while i < collection.length do 
-    studios << {collection[i][:studio] => 0}
+      studio[collection[i][:studio]] += collection[i][:worldwide_gross]
+    end 
     i += 1 
   end 
   
-  studios = studios.uniq 
+  # while i < collection.length do 
+  #   studios << {collection[i][:studio] => 0}
+  #   i += 1 
+  # end 
   
-  k = 0 
+  # studios = studios.uniq 
   
-  while k < collection.length do 
-    studios[collection[k][:studio]] += collection[k][:worldwide_gross]
-    k += 1 
-  end 
+  # k = 0 
+  
+  # while k < collection.length do 
+  #   studios[collection[k][:studio]] += collection[k][:worldwide_gross]
+  #   k += 1 
+  # end 
   return studios
 end
 
