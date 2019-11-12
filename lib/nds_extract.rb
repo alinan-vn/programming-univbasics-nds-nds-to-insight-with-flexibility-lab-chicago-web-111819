@@ -75,6 +75,10 @@ def gross_per_studio(collection)
   i = 0 
   
   while i < collection.length do 
+    if studios[]
+  
+  
+  while i < collection.length do 
     studios << {collection[i][:studio] => 0}
     i += 1 
   end 
